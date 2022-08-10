@@ -260,7 +260,8 @@ p {
 
 .button:hover,
 .button:focus {
-    color: #188CE8;
+    background-color: #188CE8;
+    cursor: pointer;
 }
 
 .backdrop {
@@ -304,19 +305,21 @@ p {
 
 .btn-close {
     position: absolute;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     width: 30px;
     height: 30px;
     top: 8px;
     right: 8px;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     background-color: inherit;
 }
 
-.btn-icon-close {
-    stroke: rgba(0, 0, 0, 0.1);
-    fill: var(--primary-bg-color);
+.btn-close:hover .btn-icon-close {
+    fill: var(--accent-color);
 }
 
 /* НАШИ ПРЕИМУЩЕСТВА */
@@ -722,7 +725,6 @@ p {
 }
 
 .project-link {
-    position: relative;
     display: block;
     width: 370px;
 
@@ -733,10 +735,6 @@ p {
 
 .project-link:hover {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.project-img {
-    position: relative;
 }
 
 .project-link img {
@@ -768,6 +766,12 @@ p {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
+}
+
+.project-photo {
+    position: relative;
+    display: block;
+    overflow: hidden;
 }
 
 .project-overlay {
